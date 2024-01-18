@@ -1,4 +1,4 @@
-name: CI
+name: jest-test
 
 # Controls when the workflow will run
 on:
@@ -24,4 +24,5 @@ jobs:
   
         - name: Run a multi-line script
           run: |
-            jest
+            npm i jest
+            npm test
