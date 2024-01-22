@@ -2,13 +2,11 @@ package com.example.project;
 
 public class Hello {
 
-
-
-	public static void main(String[] args){
+    public static void main(String[] args){
         //preferred first name = Billy
-        String first_name = "Billy";
+        String str = "Billy";
 
-        System.out.println(first_name);
+        System.out.println(str);
 
     }
 

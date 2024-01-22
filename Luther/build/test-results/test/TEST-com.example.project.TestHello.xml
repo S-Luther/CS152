@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestHello" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-01-19T18:36:00" hostname="wl-172-190.wireless.umt.edu" time="0.008">
+<testsuite name="com.example.project.TestHello" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-01-22T18:30:32" hostname="wl-172-190.wireless.umt.edu" time="0.015">
   <properties/>
-  <testcase name="testHelloWorld()" classname="com.example.project.TestHello" time="0.008">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;12345678&#10;&gt; but was: &lt;&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;12345678
-&gt; but was: &lt;&gt;
+  <testcase name="testHelloWorld()" classname="com.example.project.TestHello" time="0.015">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;12345678&#10;&gt; but was: &lt;2&#10;2&#10;&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;12345678
+&gt; but was: &lt;2
+2
+&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
