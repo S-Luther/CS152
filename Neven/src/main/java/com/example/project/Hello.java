@@ -10,19 +10,25 @@ public class Hello {
         // Loop through the 2d board, assigning each index a string element
         for (int i = 0; i < 19; i++) {
             for (int j = 0; j < 19; j++) {
-                // This is the first random location where I'll store one of the pieces
-                if (j == 14 && i == 4) {
-                    board[i][j] = "|-●";
-                // This is the second random location where I'll store one of the pieces    
-                } else if (j == 7 && i == 8) {
-                    board[i][j] = "|-◯";
-                }//Otherwise, print the normal grid
-                else
-                {
+                if (i == 0) {
+                    board[i][j] = Integer.toString(j) + " ";
+                } else if (j == 0) {
+                    if (i <= 9) {
+                        board[i][j] = Integer.toString(i) + " ";
+                    }
+                    else
+                    {
+                        board[i][j] = Integer.toString(i);
+                    }
+
+                } else {
                     board[i][j] = "|-|";
                 }
-                
+
             }
+
+            // board[9][8] = "●";
+            // board[9][9] = "◯";
 
         }
 

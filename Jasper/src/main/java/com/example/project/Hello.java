@@ -2,7 +2,21 @@ package com.example.project;
 
 public class Hello {
     public static void main(String[] args) {
-        String[][] goBoard = {
+        String[][] goBoard = [10][10];
+        
+        for(int i = 0; i < goBoard.length; i++) {
+            for(int j = 0; j < goBoard[i].length; j++) {
+                goBoard[i][j] = "-|";
+            }
+        }
+    }
+}
+
+// go pieces ◯ ●
+
+
+'''
+String[][] goBoard = {
             {"|", "-|", "-|", "-|", "-|", "-|", "-|", "-|", "-|"}
             {"|", "-|", "-|", "-|", "-|", "-|", "-|", "-|", "-|"}
             {"|", "-|", "-|", "-|", "-|", "-|", "-|", "-|", "-|"}
@@ -13,7 +27,4 @@ public class Hello {
             {"|", "-|", "-|", "-|", "-|", "-|", "-|", "-|", "-|"}
             {"|", "-|", "-|", "-|", "-|", "-|", "-|", "-|", "-|"}
         };
-    }
-}
-
-//go pieces ◯ ●
+'''
