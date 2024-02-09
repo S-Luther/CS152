@@ -11,17 +11,22 @@ public class Hello {
         goBoard[9][8] = "●";
         for (int i = 0; i < goBoard.length; i++) {
 
-            for(int j = 0; i <goBoard.length; j++) {
+            for(int j = 0; j <goBoard.length; j++) {
+                //This isn't printing out the go pieces because you
+                //are overwriting them all on line 17.
+                if goBoard[i][j] == null; {
+                    System.out.print("+")
+                }
+                //You may want to do a check if the position is null and print out
+                //"+" instead of assigning "+"
+                System.out.print(goBoard[i][j]);
 
-                goBoard[i][j] = "+"
-                System.out.print(goBoard[i][j])
-
-                if(j < goBoard.Length -1);
-                    System.out.print(" ")
+                if(j < goBoard.length -1);
+                    System.out.print(" ");
             }
-
+            
+            System.out.println();
         }
     };
 
 }
-// Main methods need to be in the Hello class

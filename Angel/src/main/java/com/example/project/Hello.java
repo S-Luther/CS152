@@ -8,6 +8,9 @@ public class Hello {
         //Looks good! now to place a piece you can simply:
         goBoard[9][8] = "●";
         goBoard[9][7] = "◯";
+        //
+
+        //Now to print out the pieces you need two nested for loops
         
     }
 }

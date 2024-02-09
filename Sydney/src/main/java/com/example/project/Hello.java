@@ -1,4 +1,11 @@
 package com.example.project;
+import java.util.Scanner;
+/*
+ * 
+ * This is looking great! 
+ * Excellent Job Sydney!
+ * 
+ */
 
 public class Hello {
     // go pieces ◯ ●
@@ -10,18 +17,15 @@ public class Hello {
     public static void main(String[] args) {
         goBoard[3][3] = white;
         goBoard[3][2] = black;
+        System.out.println("  1  2  3  4  5  6  7  8  9");
         for (int i = 0; i < goBoard[0].length; i++) {
+            System.out.print(i + 1);
             for (int j = 0; j < goBoard[i].length; j++) {
                 if (goBoard[i][j] == null) {
-                    System.out.print("-|-");
+                    System.out.print("—|—");
 
-                }
-                // You need to add you println in the outermost loop
-                // else {
-                // System.out.println();
-                // }
-                else {
-                    System.out.print("-" + goBoard[i][j] + "-");
+                } else {
+                    System.out.print("—" + goBoard[i][j] + "—");
                 }
 
                 // The else statement should be used to print the pieces
@@ -29,10 +33,13 @@ public class Hello {
             }
             // Will make a new row at the end of each j itteration
             System.out.println();
-
         }
-        // cases can be sacked, don't put a switch staement into another switch statement
-        // can't have logical operators in  cases, won't run exprssions within the cases themselves
+        // cases can be stacked, don't put a switch staement into another switch
+        // statement
+        // can't have logical operators in cases, won't run expressions within the cases
+        // themselves
+        System.out.println("Enter x coordinate for your piece:")
+
 
     }
 }

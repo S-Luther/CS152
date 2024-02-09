@@ -20,6 +20,9 @@ public class Hello {
     }
 
     static void printBoard() {
+        for (int t = 1; t < 20; t++) {
+            System.out.print(t + " ");
+        }
         for (int i = 0; i < 19; i++) {
             for (int j = 0; j < 19; j++) {
                 if (j % 19 == 0) {

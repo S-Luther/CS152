@@ -1,40 +1,61 @@
-package com.example.project;
 
-public class Hello {
+// import for input
+import java.util.Scanner;
 
+public class GoBoard {
     public static void main(String[] args) {
-        // if it's inside a function, like main, it doesn't need to be static
+        // initialize size and board
+        int size = 9;
+        char[][] board = new char[size][size];
 
-        // add cords adjust later
-        String[] xCords = { "A", "B", "C", "D", "E", "F", "G", "H", "I" };
-        String[] yCords = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+        // Initialize the board with empty spaces
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                board[i][j] = '.';
+            }
+        }
 
-        // add pattern for board (-| or other)
-        String[][] goboard = {
-                { "", "", "", "", "", "", "", "", "" },
-                { "", "", "", "", "", "", "", "", "" },
-                { "", "", "", "", "", "", "", "", "" },
-                { "", "", "", "", "", "", "", "", "" },
-                { "", "", "", "", "", "", "", "", "" },
-                { "", "", "", "", "", "", "", "", "" },
-                { "", "", "", "", "", "", "", "", "" },
-                { "", "", "", "", "", "", "", "", "" },
-                { "", "", "", "", "", "", "", "", "" },
-        };
+        // Print the initial board
+        printBoard(board);
 
-        // replace with piece
-        goBoard[3][3] = "◯";
-        goBoard[3][2] = "●";
+        // Ask the user for a cord
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the row coordinate (1-9): ");
+        int row = scanner.nextInt() - 1; // Adjust to 0-based index
+        System.out.print("Enter the column coordinate (1-9): ");
+        int col = scanner.nextInt() - 1; // Adjust to 0-based index
 
-        // ask user for cords
+        // Check if the coordinate is empty
+        if (isValidMove(board, row, col)) {
+            // Place 'X' at the chosen coordinate
+            board[row][col] = 'X';
 
-        // check if cords are valid
+            // Print updated board
+            printBoard(board);
+        } else {
+            System.out.println("Invalid move. The chosen coordinate is not empty.");
+        }
 
-        // check if cords are empty
+        scanner.close();
+    }
 
-        // place piece
+    // Method to print the board
+    private static void printBoard(char[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                System.out.print(board[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
 
-        // This is looking great!
-
-    };
+    // Method to check if cord is empty
+    private static boolean isValidMove(char[][] board, int row, int col) {
+        return board[row][col] == '.';
+    }
 }
+
+// to do 
+// change x to game peices
+// create method to flip pieces every turn

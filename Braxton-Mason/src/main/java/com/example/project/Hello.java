@@ -35,21 +35,31 @@ public class Hello {
         }
 
         Boolean cont = true;
+        Boolean flipper = true;
         int moveX, moveY;
         Scanner scn = new Scanner(System.in);
 
-        /*
-         * while (cont) {
-         * System.out.println("All coords need to be within 9x9");
-         * 
-         * System.out.print("Please Enter X-vlaue for a new Go peice");
-         * moveX = scn.nextInt();
-         * 
-         * System.out.print("Please Enter y-value for a new Go peice");
-         * moveY = scn.nextInt();
-         * 
-         * }
-         */
+        while (cont) {
+            if (flipper == true) {
+                System.out.println("It is White's turn");
+                System.out.print("Give me a number for the x coord for a new white peice");
+                moveX = scn.nextInt();
+                System.out.print("Give me a number for the y coord for a new white peice");
+                moveY = scn.nextInt();
+                Board[moveX][moveY] = "●|";
+                // need to print board with new peices
+                flipper = !flipper;
+            } else {
+                System.out.println("It is Blacks's turn");
+                System.out.print("Give me a number for the x coord for a new Black peice");
+                moveX = scn.nextInt();
+                System.out.print("Give me a number for the y coord for a new Black peice");
+                moveY = scn.nextInt();
+                Board[moveX][moveY] = "●|";
+                // need to print board with new peices
+                flipper = !flipper;
+            }
+        }
 
     }
 }

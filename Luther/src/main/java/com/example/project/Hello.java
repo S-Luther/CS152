@@ -28,7 +28,29 @@ public class Hello {
     // We'll be able to do this by essentially asking if e.g. black[] contains("some
     // piece")
 
-    public static void main(String[] args) {
+
+
+    public static void main(String[] barges) {
+
+
+
+
+        int x = 4;
+
+        if(x <= 3){
+            System.out.print("wut");
+        }
+        else if(x >= 5){
+            System.out.print("wot");
+        }
+        else{
+            System.out.print("what");
+        }
+
+        
+
+
+
 
         Boolean cont = true;
         // The condition on which our game loop hangs

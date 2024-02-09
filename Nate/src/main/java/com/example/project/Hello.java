@@ -20,9 +20,19 @@ public class Hello {
             System.out.print(i + " ");
             for (int j = 0; j < Board[i].length; j++) {
                 System.out.print(j + " ");
+                // ^^^^^^^^^^^^^^^^^^^^^^^//
+                // You should probably print out Board[i][j] here
+                // and check whether it's null with an if statement.
 
+                // I was able to get the board printed, going to work on taking input of piece
+                //and read rules to see things else I can do
             }
+            // You need a newline so everything doesn't print out in one continuos line
+            // Add System.out.println(); here.
+            System.out.println();
 
+            // ^^^^^^^^^^^^^^//
+            // taking this over to my own file to run it easily
         }
     }
 
