@@ -3,6 +3,8 @@
 import java.util.Scanner;
 
 public class GoBoard {
+
+    // Main method
     public static void main(String[] args) {
         // initialize size and board
         int size = 9;
@@ -16,14 +18,18 @@ public class GoBoard {
         }
 
         // Print the initial board
-        printBoard(board);
+        // printBoard(board);
 
-        // Ask the user for a cord
+        // Initialize scanner
         Scanner scanner = new Scanner(System.in);
+
+        // get user row
         System.out.print("Enter the row coordinate (1-9): ");
-        int row = scanner.nextInt() - 1; // Adjust to 0-based index
+        int row = scanner.nextInt() - 1;
+
+        // get user col
         System.out.print("Enter the column coordinate (1-9): ");
-        int col = scanner.nextInt() - 1; // Adjust to 0-based index
+        int col = scanner.nextInt() - 1;
 
         // Check if the coordinate is empty
         if (isValidMove(board, row, col)) {
@@ -36,7 +42,8 @@ public class GoBoard {
             System.out.println("Invalid move. The chosen coordinate is not empty.");
         }
 
-        scanner.close();
+        // close scanner. Uncomment if needed
+        // scanner.close();
     }
 
     // Method to print the board
@@ -55,7 +62,3 @@ public class GoBoard {
         return board[row][col] == '.';
     }
 }
-
-// to do 
-// change x to game peices
-// create method to flip pieces every turn

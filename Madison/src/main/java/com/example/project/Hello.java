@@ -25,8 +25,6 @@ public class Hello {
             // You need to add a newline here to make it tabular
             // You should add System.out.println();
             
-            // how would I add the numbers along the top and side?
-            //if I was trying to use a counter (num)?
         }
 
     }
