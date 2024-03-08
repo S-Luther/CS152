@@ -1,23 +1,57 @@
 package com.example.project;
 
+import java.util.Scanner;
+
 public class Hello {
 
-    static String[][] goBoard = new String[19][19];
+    static String[][] goBoard = new String[18][18];
 
     public static void main(String[] args) {
-        System.out.println(" 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17");
-        goBoard[10][12]= "●";
-        goBoard[11][3] = "◯";
+        Scanner scanner = new Scanner(System.in);
+        int x, y;
+        boolean turn = true;
+        boolean cont = true;
+        System.out.println("Welcome to the game of Go!");
         for (int i = 0; i < 18; i++) {
             for (int j = 0; j < 18; j++) {
-                if (goBoard[i][j] == null) {
-                    goBoard[i][j] = "-|-";
+                goBoard[i][j] = "-|-";
+            }
+        }
+
+        while (cont) {
+            System.out.println("    0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17");
+            for (int i = 0; i < 18; i++) {
+                if (i < 10) {
+                    System.out.print(i + "  ");
                 } else {
-                    goBoard[i][j] = "-" + goBoard[i][j] + "-";
+                    System.out.print(i + " ");
                 }
-                System.out.print(goBoard[i][j]);
+                for (int j = 0; j < 18; j++) {
+                    System.out.print(goBoard[i][j]);
+                }
+                System.out.println();
             }
             System.out.println();
+            if (turn) {
+                System.out.println("It is black's turn.");
+            } else {
+                System.out.println("It is white's turn");
+            }
+            System.out.println();
+            System.out.println("Please enter an x coordinate: ");
+            x = scanner.nextInt();
+            System.out.println("Please enter a y coordinate: ");
+            y = scanner.nextInt();
+            if (goBoard[x][y].equals("-|-")) {
+                if (turn) {
+                    goBoard[x][y] = "-●-";
+                    turn = false;
+                } else {
+
+                    goBoard[x][y] = "-◯-";
+                    turn = true;
+                }
+            }
         }
     }
 }
